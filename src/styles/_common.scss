@@ -1,0 +1,144 @@
+@import '_var.scss';
+@import '_mixin.scss';
+
+
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+}
+*:focus-visible,
+*:focus-within {
+  outline: none;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  max-width: 1920px;
+  min-width: 320px;
+  margin: 0 auto;
+//   font-family: "PlayfairDisplay", sans-serif;
+  font-family: "Questrial", sans-serif;
+  background-color: $color-0B1D26;
+  color: $color-FFFFFF;
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+.container {
+    margin: 0 auto;
+    padding: 0 80px;
+}
+.header {
+    position: relative;
+    z-index: 1000;
+    &__block {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 60px 0;
+    }
+    &__link {
+        @include linkReset;
+        display: inline-flex;
+        color: $color-FFFFFF;
+        margin-right: 40px;
+        align-items: center;
+        svg {
+            margin-right: 20px;
+        }
+    }
+}
+.logo {
+    @include linkReset;
+    font-family: 'PlayfairDisplay', sans-serif;
+    font-size: 32px;
+    color: $color-FFFFFF;
+}
+.title {
+    position: relative;
+    font-size: 18px;
+font-style: normal;
+font-weight: 800;
+line-height: normal;
+letter-spacing: 6px;
+text-transform: uppercase;
+color: $color-FBD784;
+padding-left: 104px;
+margin-bottom: 32px;
+&::before {
+    position: absolute;
+    content: '';
+    width: 72px;
+    height: 2px;
+    left: 0;
+    top: 50%;
+    background-color: $color-FBD784;
+}
+}
+.main {
+    position: relative;
+    &__image {
+        position: absolute;
+        width: 100%;
+        top: -160px;
+        min-height: 1200px;
+        background-repeat: no-repeat;
+        background-size: auto;
+        z-index: -1;
+    }
+    &__image-1 {
+        background: url('./images/hero_sky.webp'), linear-gradient(330deg, rgba(11, 29, 38, 0.00) 31.06%, #0B1D26 108.93%);
+    }
+    &__image-2 {
+        top: 610px;
+        z-index: 10;
+        background: url('./images/hero_fild.webp'), linear-gradient(180deg, rgba(11, 29, 38, 0.00) 0%, #0B1D26 61.38%);    
+    }
+    &__image-3 {
+        top: 310px;
+        background-image: url('./images/hero_mount.webp');
+    }
+}
+.hero {
+    z-index: 100;
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        padding-top: 200px;
+    }
+    &__social {
+        display: flex;
+        transform: rotate(90deg);
+        align-self: center;
+        svg {
+            margin-right: 20px;
+        }
+    }
+    &__soc-title {
+        margin-right: 30px;
+        font-size: 18px;
+        font-weight: 400;
+    }
+    &__main-title {
+        max-width: 1050px;
+  font-family: "PlayfairDisplay", Georgia, 'Times New Roman', Times, serif;
+font-size: 88px;
+font-style: normal;
+font-weight: 600;
+line-height: 100px;
+text-transform: capitalize;
+    }
+    &__descr {
+        display: inline-flex;
+        align-items: center;
+        text-transform: lowercase;
+        svg {
+            margin-left: 20px;
+        }
+    }
+}
